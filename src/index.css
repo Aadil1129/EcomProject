@@ -1,13 +1,120 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.card-page {
+  margin: 4rem auto;
+}
+#carouselExampleIndicators {
+  width: 80%;
+  margin: 8rem auto;
+  animation: carousel 25s infinite;
+}
+@keyframes carousel {
+  0% {
+    background-color: #c4d90f;
+  }
+  20% {
+    background-color: #2a6f06;
+  }
+  40% {
+    background-color: #063f6f;
+  }
+  60% {
+    background-color: #870872;
+  }
+  80% {
+    background-color: #066f65;
+  }
+  100% {
+    background-color: #d90f0f;
+  }
+}
+.order-button {
+  margin: 4rem auto;
+  text-align: center;
+}
+.dialogue-heading {
+  font-weight: bold;
+  text-align: center;
+  background-color: #1975d2;
+  color: white;
+}
+.dialogue-heading2 {
+  font-weight: bold;
+  text-align: center;
+  background-color: #2f7d33;
+  color: white;
+}
+.shirt-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  text-align: center;
+}
+.alert {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.popup-heading {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: lightcoral;
+}
+.card-stock {
+  margin: auto;
+  text-align: center;
+  color: #f44335;
+  font-size: 20px;
+  font-weight: bold;
+}
+.off {
+  font-weight: bold;
+  background-color: #f44335;
+  color: white;
+  width: 30%;
+  padding: 4px;
+  border-radius: 20px 0px 0px 20px;
+  text-align: center;
+  float: right;
+  transform: translateY(-120%);
+}
+.offcut {
+  font-size: 0.9em;
+  color: rgb(75, 75, 75);
+  text-decoration: line-through;
+  letter-spacing: 2px;
+}
+.requirement {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0;
+}
+.final-heading {
+  text-align: center;
+}
+.order-change {
+  margin: 0.5rem auto;
+  border: 2px solid rgb(165, 164, 164);
+  border-radius: 4px;
+  width: 40%;
+  text-align: center;
+  padding: 0.5rem;
 }
