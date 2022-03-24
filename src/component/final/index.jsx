@@ -6,9 +6,9 @@ import DialogContentText from "@mui/material/DialogContentText";
 
 export default function Final(props) {
   const [open, setOpen] = useState(false);
-
   const handleClickOpen = e => {
     e.preventDefault();
+    let newArr = [];
     if (props.contact === "" || props.location === "") {
       setOpen(false);
       props.require("Please fill out all required fields");
@@ -18,9 +18,11 @@ export default function Final(props) {
     } else if (props.location.length < 3) {
       props.require("Length of location must be more than 2");
     } else {
+      console.log(newArr);
       setOpen(true);
       props.require("");
     }
+    newArr.push(props.contact, props.location);
   };
 
   const handleClose = () => {
