@@ -10,7 +10,8 @@ export default function Final(props) {
   const handleClickOpen = () => {
     if (props.contact === "" || props.location === "") {
       setOpen(false);
-      props.require("Please Fill Our All These Fields");
+      props.require("Please Fill Out All These Fields");
+      setTimeout(() => {}, 2);
     } else {
       setOpen(true);
       props.require("");
