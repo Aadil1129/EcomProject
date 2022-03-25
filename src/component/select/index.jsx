@@ -126,6 +126,8 @@ export default function Select(props) {
         <div className="requirement">{Required}</div>
         <DialogActions>
           <Final
+            quantity={props.quantity}
+            price={props.mrp}
             contact={IContact}
             require={setRequired}
             location={ILocation}

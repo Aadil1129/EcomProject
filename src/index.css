@@ -118,3 +118,11 @@ code {
   text-align: center;
   padding: 0.5rem;
 }
+.thank {
+  color: #1975d2;
+  font-size: 4rem;
+}
+.order-span {
+  color: #1975d2;
+  font-size: 1.5rem;
+}

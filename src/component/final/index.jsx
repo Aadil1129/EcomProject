@@ -3,12 +3,14 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
+import arrApi from "../index.js";
 
 export default function Final(props) {
+  const [checkArr, setCheckArr] = useState(arrApi);
   const [open, setOpen] = useState(false);
   const handleClickOpen = e => {
     e.preventDefault();
-    let newArr = [];
+    // let newArr = [];
     if (props.contact === "" || props.location === "") {
       setOpen(false);
       props.require("Please fill out all required fields");
@@ -18,11 +20,18 @@ export default function Final(props) {
     } else if (props.location.length < 3) {
       props.require("Length of location must be more than 2");
     } else {
-      console.log(newArr);
+      // console.log(newArr);
       setOpen(true);
       props.require("");
     }
-    newArr.push(props.contact, props.location);
+    checkArr.forEach(item => {
+      item.quantity = props.quantity;
+      item.price = props.price;
+      item.contact = props.contact;
+      item.location = props.location;
+    });
+    console.log(checkArr);
+    // newArr(props.contact, props.location, props.quantity, props.price);
   };
 
   const handleClose = () => {
@@ -54,11 +63,11 @@ export default function Final(props) {
             }}
             id="alert-dialog-description"
           >
+            <span className="order-span">Data Store in Console </span>
+            <br />
             You Ordered Successfully
             <br />
-            <span style={{ color: "#1975d2", fontSize: "4rem" }}>
-              !THANK YOU{" "}
-            </span>
+            <span className="thank">!THANK YOU </span>
           </DialogContentText>
         </DialogContent>
       </Dialog>
